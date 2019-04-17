@@ -8,6 +8,8 @@
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
+api/.vscode
+web/.vscode
 
 ### Flask ###
 instance/*
