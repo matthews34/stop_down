@@ -8,7 +8,7 @@ Repositório para o desenvolvimento de sistema de gerenciamento para escola de a
 
 Para fazer o setup do virtualenv, instalar o módulo com `pip install virtualenv`, então criar um ambiente virtual com um dos comandos abaixo (usar o segundo caso o primeiro não funcione):
 
-```bash
+```{bash}
 virtualenv .env
 python -m venv .env
 ```
@@ -29,9 +29,9 @@ pip install -r requirements.txt
 
 ### PostgreSQL
 
-- Criar um usuário e um banco de dados ambos chamados `stopdown`
+- Criar um usuário e um banco de dados ambos chamados *stopdown*
 
-- Modificar a senha do usuário `stopdown` para `semtempoirmao`
+- Modificar a senha do usuário *stopdown* para *semtempoirmao*
 
 **NOTA** Os passos acima são necessários para que as credenciais utilizadas para a conexão da API com o banco de dados funcionem
 
