@@ -15,7 +15,7 @@ python -m venv .env
 
 por fim, é necessário entrar no ambiente criado e instalar as dependências:
 
-```bash
+```{bash}
 source .env/bin/activate (linux)
 .env/Scripts/activate (windows)
 pip install -r requirements.txt
