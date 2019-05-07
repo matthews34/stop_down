@@ -2,7 +2,11 @@
 
 Repositório para o desenvolvimento de sistema de gerenciamento para escola de aviação. Projeto proposto pela disciplina PCS3216 - Laboratório de Engenharia de Software da Escola Politécnica da USP
 
-## Setup
+# Setup
+
+## Flask + PostgreSQL
+
+Entrar na pasta `api` utilizando o comando `cd api` estando na pasta raíz do repositório e seguir os passos a seguir para fazer o setup do ambiente virtual e do PostgreSQL.
 
 ### Venv
 
@@ -35,10 +39,10 @@ pip install -r requirements.txt
 
 **NOTA** Os passos acima são necessários para que as credenciais utilizadas para a conexão da API com o banco de dados funcionem
 
-## Rodando a API
+### Rodando a API
 
 - Para rodar a API, basta entrar no ambiente virtual e executar o comando `python app.py`. Assim, a API estará rodando em seu localhost, na porta 5000 (localhost:5000)
 
-## Observações
+### Observações
 
 - Pode ser necessário atualizar as dependências da **API** (rodando `pip install -r requirements.txt`) caso novos módulos sejam adicionados ao projeto
