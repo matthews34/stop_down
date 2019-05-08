@@ -6,7 +6,7 @@ Repositório para o desenvolvimento de sistema de gerenciamento para escola de a
 
 ## Flask + PostgreSQL
 
-Entrar na pasta `api` utilizando o comando `cd api` estando na pasta raíz do repositório e seguir os passos a seguir para fazer o setup do ambiente virtual e do PostgreSQL.
+Entrar na pasta `api` utilizando o comando `cd api` estando na pasta raíz do repositório e seguir os passos a seguir para fazer o setup do ambiente virtual e do PostgreSQL (requer *python 3.6* e *PostgreSQL 11* instalados).
 
 ### Venv
 
@@ -46,3 +46,11 @@ pip install -r requirements.txt
 ### Observações
 
 - Pode ser necessário atualizar as dependências da **API** (rodando `pip install -r requirements.txt`) caso novos módulos sejam adicionados ao projeto
+
+## React
+
+Entrar na pasta `web` utilizando o comando `cd web` estando na pasta raíz do repositório e seguir os passos a seguir para fazer o setup do Node.js e React (requer *Node.js 10* e *yarn 1.15* instalados).
+
+- Instalar as dependências usando `yarn install`
+
+- Rodar o servidor do front-end executando o comando `yarn start`. Assim, o servidor estará rodando em localhost:3000
