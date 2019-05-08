@@ -17,18 +17,20 @@ from flask_restplus import Resource, Namespace, fields
 # importar métodos de Funcionario em funcionario_service
 from ..service.piloto_service import save_new_piloto, get_all_pilotos, get_a_piloto
 
+
 class PilotoDto:
     api = Namespace('piloto', description='operacoes relacionadas ao piloto')
     piloto = api.model('Piloto', {
         'id': fields.Integer,
         'nome': fields.String,
-        'cpf': fields.Integer,
+        'CPF': fields.Integer,
         'matricula': fields.Integer,
         'email': fields.String,
         'senha': fields.String,
         'horas_de_voo': fields.Float,
         'breve': fields.Integer
     })
+
 
 api = PilotoDto.api
 _piloto = PilotoDto.piloto
@@ -39,7 +41,7 @@ class PilotoList(Resource):
     def get(self):
         """Lista todos os pilotos registrados"""
         return get_all_pilotos()
-        
+
     @api.response(201, 'Piloto registrado com sucesso.')
     @api.doc('Cria um novo piloto')
     @api.expect(_piloto)
