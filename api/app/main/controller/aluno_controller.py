@@ -33,7 +33,7 @@ class AlunoDto:
 
 
 api = AlunoDto.api
-_Aluno = AlunoDto.Aluno
+_aluno = AlunoDto.Aluno
 
 
 @api.route('/')
