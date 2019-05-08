@@ -402,3 +402,4 @@ typings/
 .dynamodb/
 
 # End of https://www.gitignore.io/api/code,flask,reactnative,javascript
+.vscode
