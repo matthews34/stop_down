@@ -8,9 +8,9 @@ from app.main.model.funcionario import Funcionario
 
 def save_new_funcionario(data):
     funcionario = Funcionario(
-        name=data['name'],
+        nome=data['nome'],
         email=data['email'],
-        password=data['password']
+        senha=data['senha']
         )
     save_changes(funcionario)
 

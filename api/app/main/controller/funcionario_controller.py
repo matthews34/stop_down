@@ -18,26 +18,26 @@ from flask_restplus import Resource, Namespace, fields
 from ..service.funcionario_service import save_new_funcionario, get_all_funcionarios, get_a_funcionario
 
 class FuncionarioDto:
-    api = Namespace('funcionario', description='funcionario related operations')
+    api = Namespace('funcionário', description='operações relacionadas a funcionário')
     funcionario = api.model('Funcionario', {
         'id': fields.Integer,
-        'name': fields.String,
+        'nome': fields.String,
         'email': fields.String,
-        'password': fields.String
+        'senha': fields.String
     })
 
 api = FuncionarioDto.api
 _funcionario = FuncionarioDto.funcionario
 @api.route('/')
 class FuncionarioList(Resource):
-    @api.doc('List all registered funcionarios')
+    @api.doc('Lista todos os funcionarios')
     @api.marshal_with(_funcionario)
     def get(self):
         """List all registered funcionarios"""
         return get_all_funcionarios()
         
-    @api.response(201, 'Funcionario successfully registered.')
-    @api.doc('Create a new funcionario')
+    @api.response(201, 'Funcionário registrado com sucesso.')
+    @api.doc('Criar novo funcionário')
     @api.expect(_funcionario)
     def post(self):
         """Creates a new funcionario"""
