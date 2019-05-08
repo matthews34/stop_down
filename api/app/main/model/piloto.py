@@ -5,12 +5,13 @@ classe herdeira do objeto db.Model
 
 from app.main import db
 
+
 class Piloto(db.Model):
     __tablename__ = 'pilotos'
-    
+
     id = db.Column(db.Integer, primary_key=True)
     nome = db.Column(db.String(80), unique=False, nullable=False)
-    cpf = db.Column(db.Integer, unique=True, nullable=False)
+    CPF = db.Column(db.Integer, unique=True, nullable=False)
     matricula = db.Column(db.Integer, unique=True, nullable=False)
     email = db.Column(db.String(80), unique=True, nullable=False)
     senha = db.Column(db.String(32), unique=False, nullable=False)

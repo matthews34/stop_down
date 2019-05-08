@@ -17,14 +17,18 @@ from flask_restplus import Resource, Namespace, fields
 # importar métodos de Funcionario em funcionario_service
 from ..service.funcionario_service import save_new_funcionario, get_all_funcionarios, get_a_funcionario
 
+
 class FuncionarioDto:
-    api = Namespace('funcionário', description='operações relacionadas a funcionário')
+    api = Namespace(
+        'funcionário', description='operações relacionadas a funcionário')
     funcionario = api.model('Funcionario', {
         'id': fields.Integer,
         'nome': fields.String,
+        'CPF': field.Integer,
         'email': fields.String,
         'senha': fields.String
     })
+
 
 api = FuncionarioDto.api
 _funcionario = FuncionarioDto.funcionario
@@ -35,7 +39,7 @@ class FuncionarioList(Resource):
     def get(self):
         """List all registered funcionarios"""
         return get_all_funcionarios()
-        
+
     @api.response(201, 'Funcionário registrado com sucesso.')
     @api.doc('Criar novo funcionário')
     @api.expect(_funcionario)
