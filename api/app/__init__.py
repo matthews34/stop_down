@@ -12,6 +12,7 @@ from flask import Blueprint
 from .main.controller.instrutor_controller import api as instrutor_ns
 from .main.controller.funcionario_controller import api as funcionario_ns
 from .main.controller.piloto_controller import api as piloto_ns
+from .main.controller.aluno_controller import api as aluno_ns
 
 blueprint = Blueprint('api', __name__)
 
@@ -24,3 +25,4 @@ api = Api(blueprint,
 api.add_namespace(instrutor_ns, path='/instrutor')
 api.add_namespace(funcionario_ns, path='/funcionario')
 api.add_namespace(piloto_ns, path='/piloto')
+api.add_namespace(aluno_ns, path='/aluno')
