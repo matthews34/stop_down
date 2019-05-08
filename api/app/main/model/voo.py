@@ -4,6 +4,7 @@ classe herdeira do objeto db.Model
 """
 
 from app.main import db
+from .piloto import Piloto
 
 class Voo(db.Model):
     __tablename__ = 'voos'
@@ -14,6 +15,7 @@ class Voo(db.Model):
     matricula_da_aeronave = db.Column(db.String(40), unique=True, nullable=False)
     origem = db.Column(db.String(200), unique=False, nullable=False)
     destino = db.Column(db.String(200), unique=False, nullable=False)
+    piloto_id = db.Column(db.Integer, db.ForeignKey('pilotos.id'), nullable=True)
 
     def __repr__(self):
         return '<Voo %r>' % self.id

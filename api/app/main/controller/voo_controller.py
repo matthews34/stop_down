@@ -25,7 +25,8 @@ class VooDto:
         'data_hora_fim': fields.DateTime,
         'matricula_da_aeronave': fields.String,
         'origem': fields.String,
-        'destino': fields.String
+        'destino': fields.String,
+        'piloto_id': fields.Integer
     })
 
 api = VooDto.api

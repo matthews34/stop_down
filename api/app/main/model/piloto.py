@@ -16,6 +16,7 @@ class Piloto(db.Model):
     senha = db.Column(db.String(32), unique=False, nullable=False)
     horas_de_voo = db.Column(db.Float(13), unique=False, nullable=False)
     breve = db.Column(db.Integer, unique=True, nullable=False)
+    voos = db.relationship('Voo', backref='piloto', lazy=True)
 
     def __repr__(self):
         return '<Piloto %r>' % self.nome

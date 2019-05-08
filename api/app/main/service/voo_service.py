@@ -12,7 +12,8 @@ def save_new_voo(data):
         data_hora_fim=data['data_hora_fim'],
         matricula_da_aeronave=data['matricula_da_aeronave'],
         origem=data['origem'],
-        destino=data['destino']
+        destino=data['destino'],
+        piloto_id=data['piloto_id']
         )
     save_changes(voo)
 
