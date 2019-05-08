@@ -26,7 +26,8 @@ class VooDto:
         'matricula_da_aeronave': fields.String,
         'origem': fields.String,
         'destino': fields.String,
-        'piloto_id': fields.Integer
+        'piloto_id': fields.Integer,
+        'instrutor_id': fields.Integer
     })
 
 api = VooDto.api

@@ -18,6 +18,7 @@ class Instrutor(db.Model):
     horas_de_voo = db.Column(db.Float, unique=False, nullable=False)
     breve = db.Column(db.Integer, unique=True, nullable=False)
     certificado_instrutor = db.Column(db.Integer, unique=True, nullable=False)
+    voos = db.relationship('Voo', backref='instrutor', lazy=True)
 
     def __repr__(self):
         return '<Instrutor %r>' % self.nome

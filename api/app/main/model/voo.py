@@ -16,6 +16,7 @@ class Voo(db.Model):
     origem = db.Column(db.String(200), unique=False, nullable=False)
     destino = db.Column(db.String(200), unique=False, nullable=False)
     piloto_id = db.Column(db.Integer, db.ForeignKey('pilotos.id'), nullable=True)
+    instrutor_id = db.Column(db.Integer, db.ForeignKey('instrutors.id'), nullable=True)
 
     def __repr__(self):
         return '<Voo %r>' % self.id

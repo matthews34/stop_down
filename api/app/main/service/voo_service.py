@@ -13,7 +13,8 @@ def save_new_voo(data):
         matricula_da_aeronave=data['matricula_da_aeronave'],
         origem=data['origem'],
         destino=data['destino'],
-        piloto_id=data['piloto_id']
+        piloto_id=data['piloto_id'],
+        instrutor_id=data['instrutor_id']
         )
     save_changes(voo)
 
