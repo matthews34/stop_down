@@ -14,7 +14,7 @@ def save_new_piloto(data):
         email=data['email'],
         senha=data['senha'],
         horas_de_voo=data['horas_de_voo'],
-        breve=data['breve'],
+        breve=data['breve']
         )
     save_changes(piloto)
 
