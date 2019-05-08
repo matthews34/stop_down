@@ -41,7 +41,7 @@ pip install -r requirements.txt
 
 ### Rodando a API
 
-- Para rodar a API, basta entrar no ambiente virtual e executar o comando `python app.py`. Assim, a API estará rodando em seu localhost, na porta 5000 (localhost:5000)
+- Para rodar a API, basta entrar no ambiente virtual e executar o comando `python manage.py run`. Assim, a API estará rodando em seu localhost, na porta 5000 (localhost:5000)
 
 ### Observações
 
