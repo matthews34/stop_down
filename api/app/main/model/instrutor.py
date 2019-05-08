@@ -19,6 +19,7 @@ class Instrutor(db.Model):
     breve = db.Column(db.Integer, unique=True, nullable=False)
     certificado_instrutor = db.Column(db.Integer, unique=True, nullable=False)
     voos = db.relationship('Voo', backref='instrutor', lazy=True)
+    aulas_supervisionadas = db.relationship('Aula_supervisionada', backref='instrutor', lazy=True)
 
     def __repr__(self):
         return '<Instrutor %r>' % self.nome

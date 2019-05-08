@@ -17,6 +17,7 @@ class Voo(db.Model):
     destino = db.Column(db.String(200), unique=False, nullable=False)
     piloto_id = db.Column(db.Integer, db.ForeignKey('pilotos.id'), nullable=True)
     instrutor_id = db.Column(db.Integer, db.ForeignKey('instrutores.id'), nullable=True)
+    aula_supervisionada = db.relationship('Aula_supervisionada', backref='voo', lazy=True)
 
     def __repr__(self):
         return '<Voo %r>' % self.id
