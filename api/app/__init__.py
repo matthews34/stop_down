@@ -11,6 +11,7 @@ from flask import Blueprint
 # importar namespace do controller
 from .main.controller.instrutor_controller import api as instrutor_ns
 from .main.controller.funcionario_controller import api as funcionario_ns
+from .main.controller.piloto_controller import api as piloto_ns
 
 blueprint = Blueprint('api', __name__)
 
@@ -22,3 +23,4 @@ api = Api(blueprint,
 # adicionar namespaces na API, para setar as rotas e a documentação
 api.add_namespace(instrutor_ns, path='/instrutor')
 api.add_namespace(funcionario_ns, path='/funcionario')
+api.add_namespace(piloto_ns, path='/piloto')
