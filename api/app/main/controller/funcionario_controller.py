@@ -24,7 +24,7 @@ class FuncionarioDto:
     funcionario = api.model('Funcionario', {
         'id': fields.Integer,
         'nome': fields.String,
-        'CPF': field.Integer,
+        'CPF': fields.Integer,
         'email': fields.String,
         'senha': fields.String
     })
