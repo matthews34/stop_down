@@ -9,7 +9,7 @@ from flask_restplus import Api
 from flask import Blueprint
 
 # importar namespace do controller
-from .main.controller.user_controller import api as user_ns
+from .main.controller.instrutor_controller import api as instrutor_ns
 
 blueprint = Blueprint('api', __name__)
 
@@ -19,4 +19,4 @@ api = Api(blueprint,
           )
 
 # adicionar namespaces na API, para setar as rotas e a documentação
-api.add_namespace(user_ns, path='/user')
+api.add_namespace(instrutor_ns, path='/instrutor')
