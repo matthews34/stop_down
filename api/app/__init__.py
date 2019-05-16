@@ -14,6 +14,7 @@ from .main.controller.funcionario_controller import api as funcionario_ns
 from .main.controller.piloto_controller import api as piloto_ns
 from .main.controller.voo_controller import api as voo_ns
 from .main.controller.aluno_controller import api as aluno_ns
+from .main.controller.aula_supervisionada_controller import api as aula_supervisionada_ns
 
 blueprint = Blueprint('api', __name__)
 
@@ -28,3 +29,4 @@ api.add_namespace(funcionario_ns, path='/funcionario')
 api.add_namespace(piloto_ns, path='/piloto')
 api.add_namespace(voo_ns, path='/voo')
 api.add_namespace(aluno_ns, path='/aluno')
+api.add_namespace(aula_supervisionada_ns, path='/aula_supervisionada')
