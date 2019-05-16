@@ -8,12 +8,14 @@ Imports deste arquivo:
 
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
+from flask_cors import CORS
 
 db = SQLAlchemy()
 
 def create_app():
     # criação do app
     app = Flask(__name__)
+    CORS(app, origins='*')
     # configuração da conexão com o banco de dados
     # a URI segue o seguinte formato:
     # driver://username:password@host[:port]/database
