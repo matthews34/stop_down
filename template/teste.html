@@ -1,0 +1,131 @@
+<html>
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+/* The navigation menu links */
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+.sidenav {
+  height: 100%;
+  width: 200px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+/* Page content */
+.main {
+  margin-left: 200px; /* Same as the width of the sidenav */
+}
+
+.card{
+    margin-left: 202px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+    </style>
+</head>
+<body>
+        <div id="mySidenav" class="sidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <a href="#">About</a>
+                <a href="#">Services</a>
+                <a href="#">Clients</a>
+                <a href="#">Contact</a>
+              </div>
+              
+              <!-- Use any element to open the sidenav -->
+              <span onclick="openNav()">open</span>
+              
+              <!-- Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page -->
+              <div id="main">
+                   
+                              <div class="card">
+                                <div class="card-body">
+                                  <h4 class="card-title">Horizontal Form</h4>
+                                  <p class="card-description">
+                                   
+                                Basic form elements
+                              </p>
+                              <form class="forms-sample">
+                                <div class="form-group">
+                                  <label for="exampleInputName1">Name</label>
+                                  <input class="form-control" id="exampleInputName1" type="text" placeholder="Name">
+                                </div>
+                                <div class="form-group">
+                                  <label for="exampleInputEmail3">Email address</label>
+                                  <input class="form-control" id="exampleInputEmail3" type="email" placeholder="Email">
+                                </div>
+                                <div class="form-group">
+                                  <label for="exampleInputPassword4">Password</label>
+                                  <input class="form-control" id="exampleInputPassword4" type="password" placeholder="Password">
+                                </div>
+                                <div class="form-group">
+                                  <label>File upload</label>
+                                  <input name="img[]" class="file-upload-default" type="file">
+                                  <div class="input-group col-xs-12">
+                                    <input disabled="" class="form-control file-upload-info" type="text" placeholder="Upload Image">
+                                    <span class="input-group-append">
+                                      <button class="file-upload-browse btn btn-info" type="button">Upload</button>
+                                    </span>
+                                  </div>
+                                </div>
+                                <div class="form-group">
+                                  <label for="exampleInputCity1">City</label>
+                                  <input class="form-control" id="exampleInputCity1" type="text" placeholder="Location">
+                                </div>
+                                <div class="form-group">
+                                  <label for="exampleTextarea1">Textarea</label>
+                                  <textarea class="form-control" id="exampleTextarea1" rows="2"></textarea>
+                                </div>
+                                <button class="btn btn-success mr-2" type="submit">Submit</button>
+                                <button class="btn btn-light">Cancel</button>
+                              </form>
+                            </div>
+                          </div>
+                        </div>
+                
+
+    <script>
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+        }
+
+/* Set the width of the side navigation to 0 */
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+        }
+    </script>
+
+</body>
+</html>
